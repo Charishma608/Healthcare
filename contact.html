@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MindfulMentor - Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            background-image:url(d.jpg);
+            
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+        header{
+            background: transparent;
+           
+            background: linear-gradient(45deg, #01770b, #046b1b, #85e4a0, #0000FF);
+              
+             text-align:center;
+                -webkit-background-clip: text;
+                color: transparent;
+                
+                 
+        }
+        
+        
+        nav{
+            background-color: #b82458;
+ 
+           }
+
+        footer {
+            background-color: #FF8E9E; 
+            color: #FFFFFF; 
+            text-align: center;
+            padding: 0.1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top:420px;
+        }
+        
+
+        h2 {
+            text-align: center;
+            color: #07ad76;
+            font-weight: bold;
+        }
+        p{
+            text-align: center;
+            padding-bottom:20px;
+            
+           
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            
+            
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: auto;
+            margin-top:50px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        button {
+            background-color: #010a0f;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #5f0524;
+        }
+        .image {
+            width: 100%;
+            float: left; 
+            box-sizing: border-box; 
+        }
+        
+        .image img {
+            width: 100%; 
+            height: auto; 
+            display: block;
+        }
+        .image {
+            position: relative;
+            width: 100%;
+            float: left;
+            box-sizing: border-box;
+        }
+        
+        .image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #FFFFFF; 
+            background: linear-gradient(45deg, #650518, #b21b58, #b87a93, #d5b3c8);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 80px;
+            
+        }
+        .cherry{
+            width: 100%; 
+            height: auto; 
+            display: block;
+            size:50px;
+          
+        }
+        
+        
+       
+       
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MindfulMentor <i class="fa-solid fa-brain"></i></h1>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Online Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Content for the Contact page -->
+        <div class="image">
+            <div class="text">
+                <h2>Contact Us</h2>
+            </div>
+            <img src="e.jpg" alt="Contact Image">
+        </div>
+        
+        <section>
+            
+            <p>Reach out to us for any inquiries or assistance.</p>
+            <form id="contact-form" onsubmit="submitForm(event)">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram <i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/" target="_blank">Twitter <i class="fa-brands fa-twitter"></i></a>
+        </div>
+
+        <section class="content-section">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us for any inquiries or assistance. Our team is here to help you on your journey to mental wellness.</p>
+        
+            <div class="contact-info">
+                <p><strong>Email:</strong> info@mindfulmentor.com</p>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Address:</strong> 123 Serenity Street, Mindfulness City, MND 45678</p>
+            </div>
+        
+            <p>For specific inquiries, you can contact our committee members:</p>
+        
+            <div class="committee-members">
+                <div class="committee-member">
+                    <p><strong>Shreeraj M</strong></p>
+                    <p>Email: shreeraj25064@gmail.com</p>
+                    <p>Phone: +91 8143272388</p>
+                </div>
+        
+                <div class="committee-member">
+                    <p><strong>Charishma Bollineni</strong></p>
+                    <p>Email: charishmabollineni@gmail.com</p>
+                    <p>Phone: +91 9700290587</p>
+                </div>
+        
+                <div class="committee-member">
+                    <p><strong>Nilesh</strong></p>
+                    <p>Email: nilesh123@gmail.com</p>
+                    <p>Phone: +91 9827734857</p>
+                </div>
+            </div>
+        </section>
+       
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 MindfulMentor</p>
+    </footer>
+    <script src="index.js"></script>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            // Fetch input values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            
+            alert(`Form submitted!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+        }
+    </script>
+</body>
+</html>

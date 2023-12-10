@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>MindfulMentor - MSR</title>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/fb6bb9cd-6bf8-48d9-b697-45dc43adaacf/webchat/config.js" defer></script>
+    <style>
+        body {
+            background-image:url(d.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, nav, main, footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        nav {
+            background-color: #b82458;
+        }
+
+        header {
+            background: transparent;
+            background: linear-gradient(45deg, #01770b, #046b1b, #85e4a0, #0000FF);
+            text-align: center;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        h2 {
+            text-align: center;
+            color: #01080c;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: auto;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        button {
+            background-color: #010b11;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #prediction-result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MindfulMentor <i class="fa-solid fa-brain"></i></h1>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Online Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Content for the About page -->
+        <section>
+            <h2>Hey!! Do You Want To Check Your MSR Value? Common Let's Find It below <i class="fa-solid fa-hand-point-down"></i><i class="fa-solid fa-hand-point-down"></i></h2>
+            <form id="health-prediction-form">
+                <label for="bloodPressure">Blood Pressure:</label>
+                <input type="text" id="bloodPressure" name="bloodPressure" placeholder="e.g., 90-140" required>
+
+                <label for="heartRate">Heart Rate:</label>
+                <input type="number" id="heartRate" name="heartRate" placeholder="e.g., 60-100" required>
+
+                <label for="respirationRate">Respiration Rate:</label>
+                <input type="number" id="respirationRate" name="respirationRate" placeholder="e.g., 10-20" required>
+
+                <button type="button" onclick="predictHealth()">Predict</button>
+            </form>
+
+            <div id="prediction-result"></div>
+
+            <!-- New section for options after prediction -->
+            <div id="options-section" style="display: none; text-align: center;">
+                <h2>Choose an option based on your MSR value:</h2>
+                <button onclick="redirect('indoor')">Indoor Activity</button>
+                <button onclick="redirect('outdoor')">Outdoor Activity</button>
+                <button onclick="redirect('diet')">Customized Diet</button>
+                <button onclick="redirect('therapy')">Therapy</button>
+            </div>
+        </section>
+
+        <section class="bot">
+            <h2>Do You Have Any More Queries?<br>"Meet Our Virtual Assistant".</h2>
+            <p>Welcome to MindfulMentor! We're here to make your experience seamless and answer any questions you may have.
+
+                Meet our virtual assistant! 🤖 They are here 24/7 to assist you with a wide range of inquiries, from appointment scheduling to general health information. Don't hesitate to ask anything; they are always ready to help</p>
+        </section>
+
+        
+    </main>
+
+    <script src="index.js"></script>
+
+    <script>
+        function predictHealth() {
+            const bloodPressure = document.getElementById('bloodPressure').value;
+            const heartRate = document.getElementById('heartRate').value;
+            const respirationRate = document.getElementById('respirationRate').value;
+
+            if (validateInput(bloodPressure, heartRate, respirationRate)) {
+                const predictionResult = "Predicted MSR level is: high.   Recommended activity: Exercise Therapy";
+
+                document.getElementById('prediction-result').innerHTML = `<p>Prediction Result: ${predictionResult}</p>`;
+
+                document.getElementById('options-section').style.display = 'block';
+            } else {
+                alert('Please enter valid input for blood pressure, heart rate, and respiration rate.');
+            }
+        }
+
+        function validateInput(bloodPressure, heartRate, respirationRate) {
+            return true;
+        }
+
+        function redirect() {
+            window.location.href = 'exploreTherapy.html';
+        }
+       
+    </script>
+</body>
+</html>

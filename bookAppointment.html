@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MindfulMentor -bookAppointment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            background-image:url(d.jpg);
+            
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+        nav{
+            background-color: #b82458;
+ 
+           }
+           header{
+            background: transparent;
+           
+            background: linear-gradient(45deg, #01770b, #046b1b, #85e4a0, #0000FF);
+              
+             text-align:center;
+                -webkit-background-clip: text;
+                color: transparent;
+                
+                 
+        }
+
+        .appointment-form-container {
+            background-color: #e3bdc8; 
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        h2{
+            text-align: center;
+            padding-bottom:20px;
+            font-size:3rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        button {
+            background-color: #020f17;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #535557;
+        }
+        footer {
+            background-color: #FF8E9E; 
+            color: #FFFFFF; 
+            text-align: center;
+            padding: 0.1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MindfulMentor <i class="fa-solid fa-brain"></i></h1>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Online Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Content for the Services page -->
+        <section>
+            <div class="appointment-form-container">
+                <h2>Appointment Form <i class="fa-solid fa-calendar-check"></i></h2>
+                <form id="appointment-form">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+
+                    <label for="sex">Sex:</label>
+                    <select id="sex" name="sex">
+                        <option value="" selected disabled>Select Sex</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="transgender">Transgender</option>
+                    </select>
+
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="dateOfAppointment">Date of Appointment:</label>
+                    <input type="date" id="dateOfAppointment" name="dateOfAppointment" required>
+
+                    <label for="timeOfAppointment">Time of Appointment:</label>
+                    <input type="time" id="timeOfAppointment" name="timeOfAppointment" required>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 MindfulMentor</p>
+    </footer>
+    <script>
+        document.getElementById('appointment-form').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+            displayMessage('Appointment booked successfully!', true);
+
+           
+            setTimeout(function () {
+                
+                window.location.href = '#message-container'; 
+            }, 1000);
+        });
+
+        function displayMessage(message, isSuccess) {
+            var messageContainer = document.getElementById('message-container');
+            
+            
+            if (!messageContainer) {
+                messageContainer = document.createElement('div');
+                messageContainer.id = 'message-container';
+                messageContainer.style.padding = '10px';
+                messageContainer.style.borderRadius = '8px';
+                messageContainer.style.marginBottom = '20px';
+                document.body.insertBefore(messageContainer, document.body.firstChild);
+            }
+
+           
+            messageContainer.style.backgroundColor = isSuccess ? '#2ecc71' : '#e74c3c';
+            messageContainer.style.color = '#fff';
+            messageContainer.textContent = message;
+
+            
+            setTimeout(function () {
+                messageContainer.textContent = '';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

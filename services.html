@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>MindfulMentor - Services</title>
+    <style>
+        body {
+            background-image:url(d.jpg);
+            
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+          
+       
+        main {
+            padding: 20px;
+        }
+
+        .service-section {
+            background-color: #eabfc4;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #01090f;
+        }
+        p{
+            color:#5c5959;
+        }
+        header{
+            background: transparent;
+           
+            background: linear-gradient(45deg, #01770b, #046b1b, #85e4a0, #0000FF);
+              
+             text-align:center;
+                -webkit-background-clip: text;
+                color: transparent;
+                
+                 
+        }
+        nav{
+            background-color: #b82458;
+ 
+           }
+           footer {
+            background-color: #FF8E9E; 
+            color: #FFFFFF; 
+            text-align: center;
+            padding: 0.1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MindfulMentor <i class="fa-solid fa-brain"></i></h1>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Online Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Content for the Services page -->
+        <section>
+            <div class="service-section" id="appointment-section" onclick="navigateTo('MSR.html')">
+                <h2>MSR Reading</h2>
+                <p>Calculate your MSR value here</p>
+            </div>
+            <div class="service-section" id="appointment-section" onclick="navigateTo('bookAppointment.html')">
+                <h2>Book an Appointment</h2>
+                <p>Click here to book your appointment</p>
+            </div>
+
+            <div class="service-section" id="therapy-solutions-section" onclick="navigateTo('exploreTherapy.html')">
+                <h2>Explore Therapy Solutions</h2>
+                <p>Click here to explore our therapy solutions</p>
+            </div>
+            <div class="service-section" id="therapy-solutions-section" onclick="navigateTo('Relief.html')">
+                <h2>Stress Relief Remedies</h2>
+                <p>Follow some of the mentioned remedies here</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 MindfulMentor</p>
+    </footer>
+
+    <script src="index.js"></script>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>MindfulMentor</title>
+    <style>
+        
+        section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        body {
+            background-image: url(d.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff; 
+        }
+
+        header {
+            background: transparent;
+            background: linear-gradient(45deg, #01770b, #046b1b, #85e4a0, #0000FF);
+            text-align: center;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+        h2{
+            text-align: center;
+            color:black;
+            margin-right:150px;
+        }
+        label{
+            color:black;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #b82458;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #FF8E9E; 
+            color: #FFFFFF; 
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        #image-box {
+            width: 50%;
+            margin-right: 20px; 
+        }
+
+        #image-box img {
+            width: 100%;
+            border-radius: 10px; 
+        }
+
+        #login-form {
+            width: 45%; 
+            margin-left: 20px; 
+        }
+
+        #login-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        #login-form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        #login-form button {
+            background-color: #01090e;
+            color: #fff;
+            padding: 10px;
+            margin-left:33px;
+            cursor: pointer;
+            border: none;
+        }
+
+        #login-form button:hover {
+            background-color: #173b53;
+        }
+        h2{
+            padding-left:195px;
+            padding-bottom:50px;
+        }
+        #guidelines{
+            padding-bottom:50px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MindfulMentor <i class="fa-solid fa-brain"></i></h1>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="navigateTo('home')">Home</a></li>
+            <li><a href="#" onclick="navigateTo('services')">Online Services</a></li>
+            <li><a href="#" onclick="navigateTo('about')">About</a></li>
+            <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
+            <li><a href="#" onclick="navigateTo('signup')">SignUp</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <!-- Content for the Home page -->
+            <div id="image-box">
+                <img src="health.jpg" alt="Image Description">
+            </div>
+            <!-- Login Form -->
+            <div id="login-form">
+                <h2>SignUp for Patient Details</h2>
+                <form>
+                    <label for="aadhar">Aadhar Number:</label>
+                    <input type="text" id="aadhar" name="aadhar" required>
+    
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+    
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+    
+                    <button type="button" onclick="submitLogin()">Submit</button>
+                </form>
+            </div>
+           
+        </section>
+
+        <div id="guidelines">
+            <h3>Login Guidelines:</h3>
+            <ul>
+                <li>Secure Your Aadhar Number:
+                    <ul>
+                        <li>Keep your Aadhar number confidential and do not share it with anyone. The mental wellness app will only ask for your Aadhar number during the login process.</li>
+                    </ul>
+                </li>
+                <li>Use Your Own Mobile Number:
+                    <ul>
+                        <li>Enter only your personal and valid mobile number associated with your Aadhar details. This helps ensure that you receive important notifications securely.</li>
+                    </ul>
+                </li>
+                <li>Provide Accurate Date of Birth:
+                    <ul>
+                        <li>Enter your correct date of birth during the login. This information is essential for personalized services and authentication. Double-check before submitting.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    
+
+        
+       
+    </main>
+    <footer>
+        <p>&copy; 2023 MindfulMentor</p>
+    </footer>
+    <script src="index.js"></script>
+    <script>
+        function submitLogin() {
+            // Add logic to handle the login form submission
+            alert('Login form submitted!');
+        }
+    </script>
+</body>
+</html>
